@@ -11,8 +11,8 @@ jobs:
       - name: Login to Docker Hub
         uses: docker/login-action@v1
         with:
-          username: mourad241
-          password: pyscript@2020
+          username: ${{ secrets.DOCKER_UB_USER }}
+          password: ${{ secrets.DOCKER_HUB_TOKEN }}
       - name: Checkout
         uses: actions/checkout@v2
       - name: Test
